@@ -7,9 +7,15 @@ const app = express();
 
 //routes
 const users = require('./routes/user')
+const transactions = require('./routes/transactions')
+const recipes = require('./routes/recipe')
+const component = require('./routes/components')
 
 //route handle
 app.use('/api/user/',users)
+app.use('/api/transaction/',transactions)
+app.use('/api/recipe/',recipes)
+app.use('/api/component/',component)
 
 app.use(
     bodyParser.urlencoded({
