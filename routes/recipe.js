@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 const router = express.Router()
 const Recipe = require('../models/recipe')
+const User = require('../models/user')
 
 router.post('/signUp',async(req,res)=>{
     try{
@@ -12,6 +13,37 @@ router.post('/signUp',async(req,res)=>{
         res.status(422).send({ error: 'Can not create recipe' })
     }
 })
+
+router.post('/addtoCart',async(req,res)=>{
+    try{
+    const idRecipe = req.body.idRecipe
+    const id= req.body.id
+    console.log(id)
+    const user = await User.findById(id)
+    console.log(user)
+    const recipe = await Recipe.findById(idRecipe)
+    console.log(recipe)
+        const newItems=user.cart.itemsAndMeals
+
+        newItems.push(recipe)
+
+const totalPrice =user.cart.totalBalance+ recipe.totalPrice
+console.log(user.cart.itemsAndMeals)
+
+console.log(totalPrice)
+    
+ const userr= await User.updateOne({_id:id}, { cart:{
+    itemsAndMeals:newItems,
+    totalBalance:totalPrice
+ } });
+console.log(userr)
+    res.json({msg:'Cart updated successfully', userr})
+
+    } catch(error) {
+        res.status(422).send({ error: 'Can not create recipe' })
+    }
+})
+
 
 router.post('/viewAllRecipes',async(req,res)=>{
     try{
