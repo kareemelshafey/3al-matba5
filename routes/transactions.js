@@ -3,20 +3,38 @@ const mongoose = require('mongoose')
 
 const router = express.Router()
 const Transaction = require('../models/transactions')
+const User = require('../models/user')
 
-router.post('/signUp',async(req,res)=>{
+router.post('/',async(req,res)=>{
     try{
+console.log(req.body.id)
+    const user = await User.findById(req.body.userId)
+        console.log(user)
+    if(user.cart.itemsAndMeals.length==0){
+
+        res.status(422).send({ error: 'Your Cart is still Empty' })
+    }   else{
     const Transactions = await Transaction.create(req.body)
-    res.json({msg:'User created successfully', Transactions})
+    console.log(req.body.userId)
+     await User.updateOne({_id:req.body.userId}, { cart:{
+        itemsAndMeals:[],
+        totalBalance:0
+     } });
+     res.json({msg:'User created successfully', Transactions})
+  
+    }
     } catch(error) {
+        console.log(error)
         res.status(422).send({ error: 'Can not create transaction' })
     }
 })
-
+  
 router.post('/viewAllTransactions',async(req,res)=>{
     try{
         const Transactions = await Transaction.find()
         res.json({data: Transactions})
+
+        
     } catch (error){
         res.status(422).send({error: 'No transactions found'})
     }
