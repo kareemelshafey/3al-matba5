@@ -1,6 +1,6 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import React, { Component } from "react";
-import FoodCard from './foodCard'
+import ItemCard from './itemCard'
 import {
   Text,
   View,
@@ -15,11 +15,11 @@ import {
 import axios from "axios";
 import transactionsStyle from "./transacationsStyle";
 
-export default class Food extends React.Component {
+export default class Item extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        recipes:[]
+        items:[]
     };
     // this.onRefresh = this.onRefresh.bind(this);
     if (Platform.OS === 'android') {
@@ -32,18 +32,19 @@ export default class Food extends React.Component {
     this.setState({ expanded: !this.state.expanded });
   }
   async componentDidMount() {
-    console.log("asss")
+    // console.log("asss")
     axios({
       method: "post",
-      url: `http://192.168.1.7:5000/api/recipe/viewAllRecipes`,
+      url: `http://192.168.1.7:5000/api/component/viewAllComponents`,
+      
     }
     )
       .then(res => {
-          console.log(res.data.data)
+        //   console.log(res.data.data)
         const { data } = res;
        
         this.setState({
-            recipes:data.data
+            items:data.data
         });
       })
       .catch(e => {
@@ -69,7 +70,7 @@ export default class Food extends React.Component {
     fontSize: 24,
     lineHeight: 32,
 
-    }}>Recipes</Text>
+    }}>Items</Text>
                
 
 
@@ -83,10 +84,10 @@ export default class Food extends React.Component {
 <View style={transactionsStyle.container}>
 
 
-  {this.state.recipes.map(element => (
+  {this.state.items.map(element => (
 
 
-<FoodCard food={element} ></FoodCard> 
+<ItemCard item={element} ></ItemCard> 
  
 ))
 }

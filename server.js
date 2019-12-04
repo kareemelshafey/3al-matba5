@@ -14,12 +14,14 @@ const users = require('./routes/user')
 const transactions = require('./routes/transactions')
 const recipes = require('./routes/recipe')
 const component = require('./routes/components')
+const chat = require('./routes/chatBot')
 
 //route handle
 app.use('/api/user/',users)
 app.use('/api/transaction/',transactions)
 app.use('/api/recipe/',recipes)
 app.use('/api/component/',component)
+app.use('/api/chat/',chat)
 
 
 // Configure Mongo

@@ -1,6 +1,6 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import React, { Component } from "react";
-import FoodCard from './foodCard'
+
 import {
   Text,
   View,
@@ -9,17 +9,21 @@ import {
   LayoutAnimation,
   Platform,
   UIManager,
+
+  TouchableOpacity,
+  
  
 } from "react-native";
 
 import axios from "axios";
 import transactionsStyle from "./transacationsStyle";
-
-export default class Food extends React.Component {
+import TransactionCard from './transactionCard'
+export default class Transaction extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        recipes:[]
+        transactions:[],
+        totalPrice:0
     };
     // this.onRefresh = this.onRefresh.bind(this);
     if (Platform.OS === 'android') {
@@ -28,23 +32,26 @@ export default class Food extends React.Component {
   }
 
   changeLayout = () => {
+    console.log("asss")
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState({ expanded: !this.state.expanded });
   }
   async componentDidMount() {
-    console.log("asss")
     axios({
       method: "post",
-      url: `http://192.168.1.7:5000/api/recipe/viewAllRecipes`,
+      url: `http://192.168.1.7:5000/api/transaction/viewAllTransactions`,
+    
     }
     )
       .then(res => {
-          console.log(res.data.data)
         const { data } = res;
-       
+        console.log(data.data)
         this.setState({
-            recipes:data.data
+     
+            transactions:data.data
         });
+     console.log(data.data)
+   
       })
       .catch(e => {
         this.setState({ loading: false, refreshing: false });
@@ -69,7 +76,7 @@ export default class Food extends React.Component {
     fontSize: 24,
     lineHeight: 32,
 
-    }}>Recipes</Text>
+    }}>My Transactions</Text>
                
 
 
@@ -83,15 +90,19 @@ export default class Food extends React.Component {
 <View style={transactionsStyle.container}>
 
 
-  {this.state.recipes.map(element => (
+   {
+   
+   this.state.transactions.map(element => (
 
 
-<FoodCard food={element} ></FoodCard> 
+<TransactionCard transaction={element} ></TransactionCard> 
  
 ))
-}
+} 
 
   </View>
+
+
 </View>
 
 </View>

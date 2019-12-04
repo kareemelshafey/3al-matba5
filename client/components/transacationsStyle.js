@@ -90,6 +90,15 @@ export default {
     boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.25)',
     borderRadius: 10,
   },
+  btnTextHolder1: {
+    position: 'relative',
+    height: 50,
+    width: 328,
+    left: 16,
+    background: '#FFFFFF',
+    boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.25)',
+    borderRadius: 10,
+  },
 
   Btn: {
 
@@ -134,6 +143,22 @@ export default {
     color: '#C4C4C4'
 
   },
+  name1: {
+    position: 'absolute',
+    width: 75,
+    height: 50,
+    left: 10,
+    top: 20,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: '#C4C4C4'
+
+  },
   nameText: {
     position: 'absolute',
     width: 75,
@@ -149,8 +174,41 @@ export default {
 
     color: '#000000'
 
-  }
-  ,
+  },
+  nameText1: {
+    position: 'absolute',
+    width: 75,
+    height: 50,
+    left: 60,
+    top: 20,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: '#000000'
+
+  },
+  nameText2: {
+    position: 'absolute',
+    width: 130,
+    height: 12,
+    left: 50,
+    top: 21,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: '#000000'
+
+  },
+  
+  
   price: {
     position: 'absolute',
     width: 75,
@@ -167,9 +225,25 @@ export default {
     color: '#C4C4C4'
 
   },
-  priceText: {
+  price1: {
     position: 'absolute',
     width: 75,
+    height: 50,
+    left: 210,
+    top: 20,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: '#C4C4C4'
+
+  },
+  priceText: {
+    position: 'absolute',
+    width: 100,
     height: 50,
     left: 250,
     top: 20,
@@ -181,6 +255,54 @@ export default {
     lineHeight: 14,
 
     color: 'red'
+
+  },
+  priceText1: {
+    position: 'absolute',
+    width: 100,
+    height: 50,
+    left: 250,
+    top: 20,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: 'green'
+
+  },
+  priceText2: {
+    position: 'absolute',
+    width: 100,
+    height: 50,
+    left: 270,
+    top: 20,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: 'red'
+
+  },
+  priceText1: {
+    position: 'absolute',
+    width: 100,
+    height: 50,
+    left: 250,
+    top: 20,
+
+     
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 14,
+    lineHeight: 14,
+
+    color: 'green'
 
   },
 
@@ -636,13 +758,25 @@ export default {
   },
   AddTo: {
     position: 'relative',
-    width: 120,
-    height: 20,
+    width: 150,
+    height: 30,
     marginTop:60,
     marginBottom:20,
     
-    left: 170,
+    left: 140,
     backgroundColor:'#5dbcd2',
+    borderRadius: 5,
+
+  },
+  AddTo1: {
+    position: 'relative',
+    width: 50,
+    height: 30,
+    marginTop:-50,
+    marginBottom:20,
+    
+    left: 300,
+    backgroundColor:'red',
     borderRadius: 5,
 
   },
@@ -849,13 +983,11 @@ export default {
     position: 'relative',
 left: 20,
  marginTop: 10,
-width:300,
-  
- fontStyle: 'normal',
+width:302,
+  fontStyle: 'normal',
  fontWeight: 'normal',
- fontSize: 14,
- lineHeight: 14,
-
+ fontSize: 16,
+ lineHeight: 16,
  color: '#000000'
 
  },
@@ -866,6 +998,23 @@ width:300,
  left: 20,
  marginTop: 50,
 
+  
+ fontStyle: 'normal',
+ fontWeight: 'normal',
+ fontSize: 14,
+ lineHeight: 14,
+
+ color: '#C4C4C4'
+
+ }
+ ,
+  items1:{   
+    position: 'relative',
+ width: 200,
+ height: 50,
+ left: 20,
+ marginTop: 10,
+ marginBottom: -30,
   
  fontStyle: 'normal',
  fontWeight: 'normal',
