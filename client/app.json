@@ -1,17 +1,19 @@
 {
   "expo": {
+    "short_name": "3almt5",
     "name": "3al-matba5",
     "slug": "MyReactNative",
     "privacy": "public",
     "sdkVersion": "35.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "description": "for those who don't have time to buy food we got your back with tasty ingridents delivered to your home",
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": {
+      "src": "./assets/icon.png",
+      "size": "48x48",
+      "type": "image/png"
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -20,9 +22,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }
