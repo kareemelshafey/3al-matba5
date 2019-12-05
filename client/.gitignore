@@ -9,7 +9,7 @@ npm-debug.*
 *.orig.*
 web-build/
 web-report/
-
+.env # This contains secrets, don't store in source control
 # macOS
 .DS_Store
 node_modules/
