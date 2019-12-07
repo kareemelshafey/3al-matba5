@@ -39,7 +39,7 @@ export default class Transaction extends React.Component {
   async componentDidMount() {
     axios({
       method: "post",
-      url: `http://192.168.1.7:5000/api/transaction/viewAllTransactions`,
+      url: `http://192.168.1.7:3000/api/transaction/viewAllTransactions`,
     
     }
     )

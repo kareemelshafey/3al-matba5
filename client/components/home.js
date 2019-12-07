@@ -27,8 +27,8 @@ export default class MyComponent extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            chat: true,
-            food: false,
+            chat: false,
+            food: true,
             item: false,
             cart: false,
             transaction:false

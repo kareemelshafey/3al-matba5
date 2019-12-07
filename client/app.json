@@ -1,6 +1,5 @@
 {
   "expo": {
-    "short_name": "3almt5",
     "name": "3al-matba5",
     "slug": "MyReactNative",
     "privacy": "public",
@@ -9,13 +8,9 @@
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": {
-      "src": "./assets/icon.png",
-      "size": "48x48",
-      "type": "image/png"
-    },
+    "icon": "./assets/logoApp.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logoApp.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,6 +20,12 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "androidNavigationBar": {
+    
+      "visible": false
+    },"android": {
+      "package": "com.wallet.MobileWallet"
+  }
   }
 }
