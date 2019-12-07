@@ -6,6 +6,9 @@
   "jest": {
     "testEnvironment": "node"
   },
+  "engines": {
+    "node": "12.13.0"
+  },
   "scripts": {
     "client-install": "npm install --prefix client",
     "client": "cd client && npm start",
