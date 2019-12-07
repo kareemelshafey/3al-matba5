@@ -37,7 +37,7 @@ export default class Chatt extends Component {
      
      await axios({
             method: "post",
-            url: `http://192.168.1.7:5000/api/chat/`,
+            url: `http://192.168.1.7:3000/api/chat/`,
           data: {input: messages[0].text
           }
         }

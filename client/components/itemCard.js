@@ -39,7 +39,7 @@ export default class ItemCard extends React.Component {
      axios({
       method: "post",
       url:
-        "http://192.168.1.7:5000/api/component/addtoCart",
+        "http://192.168.1.7:3000/api/component/addtoCart",
       data: {
       id:"5de53d6c9f686208fbae3adb",
       idItem:this.props.item._id

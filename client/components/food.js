@@ -35,7 +35,7 @@ export default class Food extends React.Component {
     console.log("asss")
     axios({
       method: "post",
-      url: `http://192.168.1.7:5000/api/recipe/viewAllRecipes`,
+      url: `http://192.168.1.7:3000/api/recipe/viewAllRecipes`,
     }
     )
       .then(res => {
