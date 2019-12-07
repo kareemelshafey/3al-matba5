@@ -5,10 +5,13 @@ const router = express.Router()
 const User = require('../models/user')
 
 router.post('/signUp',async(req,res)=>{
+    
     try{
-    const User = await User.create(req.body)
-    res.json({msg:'User created successfully', User})
+        console.log(req.body)
+    const user = await User.create(req.body)
+    res.json({msg:'User created successfully', user})
     } catch(error) {
+        console.log(error)
         res.status(422).send({ error: 'Can not create user' })
     }
 })

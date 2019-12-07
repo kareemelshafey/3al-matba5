@@ -13,7 +13,12 @@ const recipeSchema = new Schema({
     },
     totalPrice:{
         type: Number
-    }
+    },
+        type:{
+            type: String
+        }
+    
+
 })
 
 module.exports = recipes=mongoose.model('recipes', recipeSchema)

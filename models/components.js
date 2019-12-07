@@ -8,8 +8,11 @@ const componentsSchema = new Schema({
     description:{
         type: String
     },
-    price:{
+    totalPrice:{
         type: Number
+    },
+    type:{
+        type: String
     }
 })
 
