@@ -15,7 +15,7 @@ const transactions = require('./routes/transactions')
 const recipes = require('./routes/recipe')
 const component = require('./routes/components')
 const chat = require('./routes/chatBot')
-
+const config= require('./config')
 //route handle
 app.use('/api/user/',users)
 app.use('/api/transaction/',transactions)
@@ -25,7 +25,7 @@ app.use('/api/chat/',chat)
 
 
 // Configure Mongo
-const db = "mongodb+srv://kareemkimo39:kareemesam-123@cluster0-ap5yc.mongodb.net/test?retryWrites=true&w=majority";
+const db = process.env.mongoDB ||config.mongoDB;
 
 // Connect to Mongo with Mongoose
 mongoose
