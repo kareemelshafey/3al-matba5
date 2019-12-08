@@ -20,10 +20,6 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
-    },
-    "androidNavigationBar": {
-    
-      "visible": false
     },"android": {
       "package": "com.wallet.MobileWallet"
   }

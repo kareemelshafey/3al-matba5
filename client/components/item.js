@@ -35,7 +35,7 @@ export default class Item extends React.Component {
     // console.log("asss")
     axios({
       method: "post",
-      url: `http://192.168.1.7:3000/api/component/viewAllComponents`,
+      url: `http://secure-caverns-33420.herokuapp.com/api/component/viewAllComponents`,
       
     }
     )

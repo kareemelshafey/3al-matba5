@@ -35,7 +35,7 @@ export default class Cart extends React.Component {
     axios({
      method: "post",
      url:
-       "http://192.168.1.7:3000/api/transaction/",
+       "http://secure-caverns-33420.herokuapp.com/api/transaction/",
      data: {
       userId:"5de53d6c9f686208fbae3adb",
       date:Date().toString(),
@@ -59,7 +59,7 @@ export default class Cart extends React.Component {
   async componentDidMount() {
     axios({
       method: "post",
-      url: `http://192.168.1.7:3000/api/user/viewUser`,
+      url: `http://secure-caverns-33420.herokuapp.com/api/user/viewUser`,
     data: {
         id:'5de53d6c9f686208fbae3adb'
     },

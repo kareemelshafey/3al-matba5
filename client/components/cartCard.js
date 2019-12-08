@@ -37,7 +37,7 @@ export default class CartCard extends React.Component {
     axios({
      method: "post",
      url:
-       "http://192.168.1.7:3000/api/recipe/removeFromCart",
+       "http://secure-caverns-33420.herokuapp.com/api/recipe/removeFromCart",
      data: {
      id:"5de53d6c9f686208fbae3adb",
      idRecipe:this.props.food._id

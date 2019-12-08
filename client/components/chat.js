@@ -8,7 +8,7 @@ export default class Chatt extends Component {
         messages: [
             {
               _id: 1,
-              text: "How Can I Help You Sir",
+              text: "Hello This is our amazing chatBot you can ask about any recipes and if we dont have an answer we can easily we dont know :D",
               createdAt: new Date(),
               user: {
                 _id: 2,
@@ -37,7 +37,7 @@ export default class Chatt extends Component {
      
      await axios({
             method: "post",
-            url: `http://192.168.1.7:3000/api/chat/`,
+            url: `http://secure-caverns-33420.herokuapp.com/api/chat/`,
           data: {input: messages[0].text
           }
         }
