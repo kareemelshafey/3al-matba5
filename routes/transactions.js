@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const router = express.Router()
 const Transaction = require('../models/transactions')
 const User = require('../models/user')
+const con = require('../models/user')
 
 router.post('/',async(req,res)=>{
     try{
@@ -30,6 +31,8 @@ console.log(req.body.id)
 })
   
 router.post('/viewAllTransactions',async(req,res)=>{
+//    console.log(process.env)
+   console.log('The value of PORT is:', process.env.PORT);
     try{
         const Transactions = await Transaction.find()
         res.json({data: Transactions})
