@@ -25,7 +25,7 @@ app.use('/api/chat/',chat)
 
 
 // Configure Mongo
-const db = process.env.mongoDB ||config.mongoDB;
+const db = process.env.mongoDB ||config.mongoDB |'|mongodb+srv://kareemkimo39:kareemesam-123@cluster0-ap5yc.mongodb.net/test?retryWrites=true&w=majority';
 
 // Connect to Mongo with Mongoose
 mongoose
