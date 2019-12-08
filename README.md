@@ -10,7 +10,8 @@ You could download our app from the following link :
 Heroku deployment link :
         https://secure-caverns-33420.herokuapp.com
         
-Example of our config file 
+Example of our config.js file 
+
     module.exports ={
         mongoDB:'mongodb+srv://kareemkimo39:kareemesam-123@cluster0-ap5yc.mongodb.net/test?retryWrites=true&w=majority',
         WatsonApiKey:'E3VBZU1rwsJiJBCYrNsaGb6oNZ4IznmXvntkBdrFB90y',
